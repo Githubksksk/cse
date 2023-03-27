@@ -41,40 +41,40 @@ client.login(config.token || process.env.TOKEN)
 const modal = new ModalBuilder()
 .setCustomId('form')
 .setTitle('Godzilla - Kredi Kart!')
-  const a1 = new TextInputBuilder()
+  const aa1 = new TextInputBuilder()
   .setCustomId('tur')
   .setLabel('Kredi Kart Türü')
   .setStyle(TextInputStyle.Paragraph) 
   .setMinLength(2)
   .setPlaceholder('VISA')
   .setRequired(true)
-  const a2 = new TextInputBuilder()
+  const aa2 = new TextInputBuilder()
   .setCustomId('numara')
   .setLabel('Kart Numarası')
   .setStyle(TextInputStyle.Paragraph) 
   .setMinLength(2)
   .setPlaceholder('447 7005 3122 1222')
   .setRequired(true)
-  const a3 = new TextInputBuilder()
+  const aa3 = new TextInputBuilder()
   .setCustomId('cvc')
   .setLabel('CVC')
   .setStyle(TextInputStyle.Paragraph) 
   .setMinLength(2)
   .setPlaceholder('95')
   .setRequired(true)
-  const a4 = new TextInputBuilder()
+  const aa4 = new TextInputBuilder()
   .setCustomId('son')
   .setLabel('Son Kullanım Tarihi')
   .setStyle(TextInputStyle.Paragraph) 
   .setMinLength(2)
   .setPlaceholder('05/24')
   .setRequired(true)
-  const row = new ActionRowBuilder().addComponents(a1);
-  const row2 = new ActionRowBuilder().addComponents(a2);
-  const row3 = new ActionRowBuilder().addComponents(a3);
-  const row4 = new ActionRowBuilder().addComponents(a4);
+  const ro1 = new ActionRowBuilder().addComponents(aa1);
+  const ro2 = new ActionRowBuilder().addComponents(aa2);
+  const ro3 = new ActionRowBuilder().addComponents(aa3);
+  const ro4 = new ActionRowBuilder().addComponents(aa4);
 
-  modal.addComponents(row, row2, row3, row4);
+  modal.addComponents(ro1, ro2, ro3, ro4);
 client.on('interactionCreate', async (interaction) => {
 
 	if(interaction.customId === "oluştur"){
