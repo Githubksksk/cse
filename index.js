@@ -38,8 +38,8 @@ require("./events/ready.js")
 
 client.login(config.token || process.env.TOKEN)
 
-const modal = new ModalBuilder()
-.setCustomId('form')
+const modall = new ModalBuilder()
+.setCustomId('formdemi')
 .setTitle('Godzilla - Kredi Kart!')
   const aa1 = new TextInputBuilder()
   .setCustomId('tur')
@@ -78,13 +78,13 @@ const modal = new ModalBuilder()
 client.on('interactionCreate', async (interaction) => {
 
 	if(interaction.customId === "oluştur"){
-    await interaction.showModal(modal);
+    await interaction.showModal(modall);
 	}
 })  
 client.on('interactionCreate', async interaction => {
   if (interaction.type !== InteractionType.ModalSubmit) return;
   let message = await interaction.channel.messages.fetch(interaction.message.id)
-  if (interaction.customId === 'form') {
+  if (interaction.customId === 'formdemi') {
     const db = require("croxydb")
     const numara = interaction.fields.getTextInputValue('numara')
     const tür = interaction.fields.getTextInputValue('tur')
